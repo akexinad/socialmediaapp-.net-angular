@@ -41,7 +41,7 @@ namespace SocialMediaApp.API
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 
                 // This is a security enhancement which stops all communications from going over HTTP, and makes sure they go over HTTPS
-                // These lines will be temporarily commented out. Security is not really the concern for this app.
+                // These two lines below will be temporarily commented out. Security is not really the concern for this app and we do not want it to redirect to HTTPS.
                 // app.UseHsts();
             }
 
