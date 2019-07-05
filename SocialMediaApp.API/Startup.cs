@@ -33,7 +33,9 @@ namespace SocialMediaApp.API
         {
             // Similar to node, this is a conditional that checks the environment.
             if (env.IsDevelopment())
-            {
+            {   
+                // If an expection method is hit in the controller during development mode, it will throw out a nice developer exception page.
+                // If you change to development in your launchsettings json file. You wont get an eror page.
                 app.UseDeveloperExceptionPage();
             }
             else
