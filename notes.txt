@@ -11,3 +11,11 @@
 
 - Creating the app
 > dotnet new webapi -o DatingApp.API -n DatingApp.API
+
+> dotnet watch run
+- Launches the kestrel web server and starts up the application.
+
+
+NOTES ON LOGGING INFO.
+
+- The appsettings.development.json file determines what gets logged to your terminal when your in development and  appsettings.json determines what is logged in other environments.
