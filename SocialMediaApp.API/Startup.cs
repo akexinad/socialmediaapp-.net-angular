@@ -31,6 +31,7 @@ namespace SocialMediaApp.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            // Similar to node, this is a conditional that checks the environment.
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -38,10 +39,15 @@ namespace SocialMediaApp.API
             else
             {
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+
+                // This is a security enhancement which stops all communications from going over HTTP, and makes sure they go over HTTPS
+                // These lines will be temporarily commented out. Security is not really the concern for this app.
+                // app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
+
+            // This method gives us the ability to route to different actions.
             app.UseMvc();
         }
     }
