@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SocialMediaApp.API.Controllers
-{
+{   
+    // The name of the route is determined by the name of the controller. In this example:
+    // http://localhost:5000/api/values/5
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase

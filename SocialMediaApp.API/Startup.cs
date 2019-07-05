@@ -48,6 +48,8 @@ namespace SocialMediaApp.API
             // app.UseHttpsRedirection();
 
             // This method gives us the ability to route to different actions.
+            // Mvc is a form of middleware that hooks up your backend end point to the client requests.
+            // It routes our requests to the right controller.
             app.UseMvc();
         }
     }
