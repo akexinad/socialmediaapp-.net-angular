@@ -1,0 +1,12 @@
+.NET COMMAND LINE NOTES
+
+> dotnet -h
+- Provides a list of all your commands.
+
+> dotnet new -h
+- Contextual help for all the different types of projects we can build.
+
+> dotnet new webapi -h
+- help on this particular type of app.
+
+> 
