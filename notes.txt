@@ -9,4 +9,5 @@
 > dotnet new webapi -h
 - help on this particular type of app.
 
-> 
+- Creating the app
+> dotnet new webapi -o DatingApp.API -n DatingApp.API
