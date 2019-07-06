@@ -60,3 +60,11 @@ CREATING THE DATABASE:
 > dotnet ef database update
 
 - This will update the databse with the latest migration as well as create the database if you havent done so.
+
+
+
+
+EDITING CORS
+
+- See startup.cs services and configure method where configurations is supplied.
+- Once you have configured it to allow any, if you check your response headers in your network in your browser, you will see an * value for Access-Control-Allow-Origin in the 200 get request for values.

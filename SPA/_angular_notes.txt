@@ -11,3 +11,12 @@ NG ONINIT ()
 - So the constructor makes HttpClient available.
 - We write the logic to get the values.
 - We then pass the getValues() function in ngOninit() so the function is invoked
+
+
+
+
+CORS
+
+- Cross-Origin-Resdource-Sharing.
+- CORS controls which client is allowed to access our API.
+- These are managed in the backend. See dotnet notes

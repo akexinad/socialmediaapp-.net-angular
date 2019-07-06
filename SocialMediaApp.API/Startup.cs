@@ -33,6 +33,7 @@ namespace SocialMediaApp.API
             // The value of the connection string is declared in appsettings.json
             services.AddDbContext<DataContext>(db => db.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +60,7 @@ namespace SocialMediaApp.API
             // This method gives us the ability to route to different actions.
             // Mvc is a form of middleware that hooks up your backend end point to the client requests.
             // It routes our requests to the right controller.
+            app.UseCors(config => config.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }
