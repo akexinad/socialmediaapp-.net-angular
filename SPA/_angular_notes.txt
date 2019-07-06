@@ -1,0 +1,13 @@
+HTTP REQUESTS
+
+- Http requests retun an observable, and to access the observable, we need to subscribe to the request.
+
+
+
+NG ONINIT ()
+
+- This function happens after the constreuctor is invoked and when the component is initialized.
+
+- So the constructor makes HttpClient available.
+- We write the logic to get the values.
+- We then pass the getValues() function in ngOninit() so the function is invoked
