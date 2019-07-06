@@ -31,7 +31,7 @@ namespace SocialMediaApp.API
             // We add a DbContext of type DataContext, and pass in options to use Sqlite.
             // To install Sqlite, we use the nuget package manager.
             // The value of the connection string is declared in appsettings.json
-            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<DataContext>(db => db.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
