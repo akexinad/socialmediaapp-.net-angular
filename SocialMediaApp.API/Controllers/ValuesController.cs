@@ -3,27 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SocialMediaApp.API.Data;
 
 namespace SocialMediaApp.API.Controllers
-{   
+{
     // The name of the route is determined by the name of the controller. In this example:
     // http://localhost:5000/api/values/5
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        // In order to access the data inside the Values Controller, we need to inject the DataContext via a constructor
+        // We give it the same name as the contoller
+        // We pass DataContext as a parameter, give it the name of context.
+        // Then we initialize field from paramter so it is available throughout the class and rename it _context.
+        private readonly DataContext _context;
+        public ValuesController(DataContext context)
         {
-            return new string[] { "value1", "value2" };
+            _context = context;
+
+        }
+
+        // GET api/values
+        // IActionResult allows us to return HTTP responses to the client.
+        [HttpGet]
+        public IActionResult GetValues()
+        {
+            var values = _context.Values.ToList();
+
+            return Ok(values);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public IActionResult GetValue(int id)
         {
-            return "value";
+            var value = _context.Values.FirstOrDefault(val => val.Id == id);
+
+            return Ok(value);
         }
 
         // POST api/values
