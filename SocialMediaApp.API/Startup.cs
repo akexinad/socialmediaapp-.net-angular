@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -18,6 +19,7 @@ namespace SocialMediaApp.API
     {
         public Startup(IConfiguration configuration)
         {
+            // This property is where you can access the configuration key/value pairs in the appsettings.json file.
             Configuration = configuration;
         }
 
@@ -28,7 +30,8 @@ namespace SocialMediaApp.API
         {
             // We add a DbContext of type DataContext, and pass in options to use Sqlite.
             // To install Sqlite, we use the nuget package manager.
-            services.AddDbContext<DataContext>(x => x.UseSqlite("Connectionstring"));
+            // The value of the connection string is declared in appsettings.json
+            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

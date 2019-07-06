@@ -28,7 +28,7 @@ NOTES ON LOGGING INFO.
 DATABASE NOTES.
 
 - We are going to take the "Code First" approach.
-    - This means that we create our class models, that represent the objects that directly relate to tables in our database.
+    - This means that we create our class models first, that represent the objects that directly relate to tables in our database.
 
 
 
@@ -45,3 +45,18 @@ ENTITYFRAMEWORK NOTES:
 - Use the nugetpackage manager to install sqlite.
 - ctrl shift P > nuget package manager: add package > Microsoft.EntityFrameworkCore.Sqlite > pick the latest version.
 - It should be added to your .csproj file.
+
+
+
+
+CREATING THE DATABASE:
+
+- After you have completed the configuration settings in the appsettings.json file and the startup.cs file, run these commands:
+
+> dotnet ef migration add InitialCreate
+
+- It creates a migrations folder.
+
+> dotnet ef database update
+
+- This will update the databse with the latest migration as well as create the database if you havent done so.
