@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj": {}
+    "d:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj": {}
   },
   "projects": {
-    "D:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj": {
+    "d:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj",
+        "projectUniqueName": "d:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj",
         "projectName": "SocialMediaApp.API",
-        "projectPath": "D:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj",
+        "projectPath": "d:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj",
         "packagesPath": "C:\\Users\\danny\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\obj\\",
+        "outputPath": "d:\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -49,6 +49,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.4, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",

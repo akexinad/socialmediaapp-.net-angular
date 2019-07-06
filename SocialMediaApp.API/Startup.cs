@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using SocialMediaApp.API.Data;
 
 namespace SocialMediaApp.API
 {
@@ -25,6 +26,9 @@ namespace SocialMediaApp.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // We add a DbContext of type DataContext, and pass in options to use Sqlite.
+            // To install Sqlite, we use the nuget package manager.
+            services.AddDbContext<DataContext>(x => x.UseSqlite("Connectionstring"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
