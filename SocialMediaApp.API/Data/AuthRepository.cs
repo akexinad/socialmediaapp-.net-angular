@@ -32,7 +32,7 @@ namespace SocialMediaApp.API.Data
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
 
-            // Add the new user to the database.
+            // Add and save the new user to the database.
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
 
