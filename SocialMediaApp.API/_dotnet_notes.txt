@@ -102,3 +102,5 @@ WHY USE THE REPO PATTERN???
 - Decouples the application from the persistence framework.
 - All db queries in the same place.
 - Promotes testability.
+
+- The repository is found in the Data folder and is in the form of an interface.
