@@ -30,8 +30,11 @@ namespace SocialMediaApp.API.Data
 
         private bool verifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
         {
+            // We create the hmac value using the password salt provided.
             using (var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt))
             {
+                // Then we create the computed hash using the hmac value.
+                // and compare it to the password hash provided.
                 var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
                 for (int i = 0; i < computedHash.Length; i++)
                 {
