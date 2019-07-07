@@ -1,4 +1,5 @@
 .NET COMMAND LINE NOTES
+=======================
 
 > dotnet -h
 - Provides a list of all your commands.
@@ -18,14 +19,16 @@
 
 
 
-NOTES ON LOGGING INFO.
+NOTES ON LOGGING INFO
+=====================
 
 - The appsettings.development.json file determines what gets logged to your terminal when your in development and  appsettings.json determines what is logged in other environments.
 
 
 
 
-DATABASE NOTES.
+DATABASE NOTES
+==============
 
 - We are going to take the "Code First" approach.
     - This means that we create our class models first, that represent the objects that directly relate to tables in our database.
@@ -34,7 +37,8 @@ DATABASE NOTES.
 
 
 
-ENTITYFRAMEWORK NOTES:
+ENTITYFRAMEWORK NOTES
+=====================
 
 - When you create a Model/Entity, you need to let EntityFramework know bout its existence.
 - This happens in the DataContext file.
@@ -49,7 +53,8 @@ ENTITYFRAMEWORK NOTES:
 
 
 
-CREATING THE DATABASE:
+CREATING THE DATABASE
+=====================
 
 - After you have completed the configuration settings in the appsettings.json file and the startup.cs file, run these commands:
 
@@ -65,6 +70,28 @@ CREATING THE DATABASE:
 
 
 EDITING CORS
+============
 
 - See startup.cs services and configure method where configurations are supplied.
 - Once you have configured it to allow any, if you check your response headers in your network in your browser, you will see an * value for Access-Control-Allow-Origin in the 200 get request for values.
+
+
+
+
+THE REPOSITORY PATTERN
+======================
+
+- We do not query the database itself. All the querying isd abstractedand executed by Entity Framework:
+
+KESTREL --> CONRTOLLER --> DB CONTEXT --> ENTITY FRAMEWORK --> SQL DATABASE
+
+- The repository pattern adds a further layer of abstraction.
+- This takes out the methods querying the database out of the controllers and into the repository.
+
+- MICROSOFT DEF.N OF A REPOSITORY: The repository mediates between the data source layer and the 
+business layers of the application. It queries the data source for the data, maps the data 
+from the data source to a business entity and persists changes in the business entity to the data
+source. A repository separates the business logic from the interactions with the underlying 
+data source or Web service.
+
+CONTROLLER --> REPOSITORY INTERFACE --> REPOSITORY IMPLEMENTATION --> DB QUERY
