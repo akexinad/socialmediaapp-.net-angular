@@ -14,5 +14,8 @@ namespace SocialMediaApp.API.Data
 
         // It is convention to make the prop name plural as it will become the table name in our database.
         public DbSet<Value> Values { get; set; }
+
+        // NOTE: whenever you add a new model or modify a model, we need to run a migration.
+        public DbSet<User> Users { get; set; }
     }
 }

@@ -54,11 +54,11 @@ CREATING THE DATABASE:
 - After you have completed the configuration settings in the appsettings.json file and the startup.cs file, run these commands:
 
 > dotnet ef migration add InitialCreate
-
 - It creates a migrations folder.
 
-> dotnet ef database update
+- NOTE: Remember to always check your migration file in the migrations folder to ensure that all necessary information is correct.
 
+> dotnet ef database update
 - This will update the databse with the latest migration as well as create the database if you havent done so.
 
 
@@ -66,5 +66,5 @@ CREATING THE DATABASE:
 
 EDITING CORS
 
-- See startup.cs services and configure method where configurations is supplied.
+- See startup.cs services and configure method where configurations are supplied.
 - Once you have configured it to allow any, if you check your response headers in your network in your browser, you will see an * value for Access-Control-Allow-Origin in the 200 get request for values.
