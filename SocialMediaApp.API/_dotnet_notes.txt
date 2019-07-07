@@ -95,3 +95,10 @@ source. A repository separates the business logic from the interactions with the
 data source or Web service.
 
 CONTROLLER --> REPOSITORY INTERFACE --> REPOSITORY IMPLEMENTATION --> DB QUERY
+
+WHY USE THE REPO PATTERN???
+
+- Minimizes duplicate query logic.
+- Decouples the application from the persistence framework.
+- All db queries in the same place.
+- Promotes testability.
