@@ -103,4 +103,5 @@ WHY USE THE REPO PATTERN???
 - All db queries in the same place.
 - Promotes testability.
 
-- The repository is found in the Data folder and is in the form of an interface.
+- The repository interface is found in the Data folder and is in the form of an interface.
+- You the use the interface to create the actual repository. This is where the data querying will happen.
