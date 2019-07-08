@@ -34,9 +34,12 @@ namespace SocialMediaApp.API
             services.AddDbContext<DataContext>(db => db.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddCors();
+            // NOTE: The controller will only be fed the IAuth Repository so the code in the controller will never have to change.
+            services.AddScoped<IAuthRepository, AuthRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // NOTE: The ordering of the services is important here.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             // Similar to node, this is a conditional that checks the environment.

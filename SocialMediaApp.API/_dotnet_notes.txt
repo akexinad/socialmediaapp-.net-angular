@@ -105,3 +105,16 @@ WHY USE THE REPO PATTERN???
 
 - The repository interface is found in the Data folder and is in the form of an interface.
 - You the use the interface to create the actual repository. This is where the data querying will happen.
+
+
+
+
+REGISTERING SERVICES IN THE STARTUP CLASS
+=========================================
+
+- The order of the servies in the startup.cs file is only important in the Configure() method, not the ConfigureServices() method.
+
+- There are a number of options:
+    - AddSingleton() => creates a single instance of the Auth repository. It can cause problems when handling concurrent requests.
+    - AddTransient() => creates a new instance of that repository everytime that repository is requested by the client. Great for light-weight stateless services.
+    - AddScoped() => Creates a new instance of the repository within each scoped request. That, it creates a new repository for each respective web request, but uses the same repository for each respective request.
