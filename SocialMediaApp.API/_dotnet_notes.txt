@@ -118,3 +118,12 @@ REGISTERING SERVICES IN THE STARTUP CLASS
     - AddSingleton() => creates a single instance of the Auth repository. It can cause problems when handling concurrent requests.
     - AddTransient() => creates a new instance of that repository everytime that repository is requested by the client. Great for light-weight stateless services.
     - AddScoped() => Creates a new instance of the repository within each scoped request. That, it creates a new repository for each respective web request, but uses the same repository for each respective request.
+
+
+
+
+DATA TRANSFER OBJECTS (DTO)
+===========================
+
+- Dto's are used to map large and complez objects into simpler ones for the view.
+- In addition you can use dto's to stop the transfer of sensitive data.
