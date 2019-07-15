@@ -127,3 +127,20 @@ DATA TRANSFER OBJECTS (DTO)
 
 - Dto's are used to map large and complez objects into simpler ones for the view.
 - In addition you can use dto's to stop the transfer of sensitive data.
+
+
+
+
+TOKEN AUTHENTICATION
+====================
+
+- A JWT token structure has 3 parts:
+    - THE HEADER:
+        - This contains info of the algorithm used to encrypt the token.
+        - The token type. In this case a JWT.
+    - THE PAYLOAD:
+        - This part contains user info such as id, name, token expiry etc.
+        - nbf = not before
+        - exp = expiry date
+    - SECRET:
+        - The algorithm used to hash the token.
