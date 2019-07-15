@@ -142,5 +142,6 @@ TOKEN AUTHENTICATION
         - This part contains user info such as id, name, token expiry etc.
         - nbf = not before
         - exp = expiry date
+        - iat = issued at
     - SECRET:
         - The algorithm used to hash the token.
