@@ -20,6 +20,15 @@ namespace SocialMediaApp.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
+
+            // If we were not using ApiContoller, it would not be able to read the
+            // validations from the Dto and would thus have to add the [FromBody] attribute 
+            // before the UserForRegisterDto argument in the Register method as well 
+            // as the manual velidator below write them manually as such:
+
+            // if (!ModelState.IsValid)
+            //     return BadRequest(ModelState);
+            
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
 
             // Checking if the user already exists.
