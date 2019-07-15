@@ -12,6 +12,8 @@ namespace SocialMediaApp.API.Controllers
     // http://localhost:5000/api/values/5
     [Route("api/[controller]")]
     [ApiController]
+
+    // The differnce between the Controller class and the ControllerBase class is that the former has MVC view support whilst the latter does not.
     public class ValuesController : ControllerBase
     {
         // In order to access the data inside the Values Controller, we need to inject the DataContext via a constructor

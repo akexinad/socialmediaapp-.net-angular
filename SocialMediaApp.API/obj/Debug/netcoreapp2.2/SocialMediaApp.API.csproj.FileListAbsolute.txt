@@ -12,3 +12,17 @@ D:\code\udemy\cummings\aspnetcore\SocialMediaApp.API\obj\Debug\netcoreapp2.2\Soc
 D:\code\udemy\cummings\aspnetcore\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.RazorTargetAssemblyInfo.cache
 D:\code\udemy\cummings\aspnetcore\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.dll
 D:\code\udemy\cummings\aspnetcore\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.pdb
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.csprojAssemblyReference.cache
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.csproj.CoreCompileInputs.cache
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.RazorAssemblyInfo.cache
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.RazorAssemblyInfo.cs
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.AssemblyInfoInputs.cache
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.AssemblyInfo.cs
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.dll
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.pdb
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.deps.json
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.runtimeconfig.json
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.runtimeconfig.dev.json
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.dll
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.pdb
+C:\Users\cecd304\me\code\udemy\cummings\socialmediaapp-.net-angular\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.RazorTargetAssemblyInfo.cache
