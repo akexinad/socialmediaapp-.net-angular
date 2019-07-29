@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SocialMediaApp.API.Data;
@@ -10,6 +11,9 @@ namespace SocialMediaApp.API.Controllers
 {
     // The name of the route is determined by the name of the controller. In this example:
     // http://localhost:5000/api/values/5
+
+    // This attribute ensures you need to be authorized to enter this controller.
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
 
@@ -38,6 +42,10 @@ namespace SocialMediaApp.API.Controllers
         }
 
         // GET api/values/5
+
+        // The AllowAnonymous attribute can over ride the Authorize attribute
+        // and allow access wiothout authorization. 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {

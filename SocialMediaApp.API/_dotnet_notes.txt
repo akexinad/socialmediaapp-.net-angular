@@ -145,3 +145,11 @@ TOKEN AUTHENTICATION
         - iat = issued at
     - SECRET:
         - The algorithm used to hash the token.
+
+
+
+
+AUTHENTICATION MIDDLEWARE
+=========================
+
+- Remember that any kind of middleware must be declared in the startup class.
