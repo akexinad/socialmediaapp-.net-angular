@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  baseUrl = 'http://localhost:5000/api/auth';
+  baseUrl = 'http://localhost:5000/api/auth/';
 
   constructor(private http: HttpClient) { }
 
@@ -18,13 +18,14 @@ export class AuthService {
     // we need to store the token in out local memory for future access.
       .pipe(
         map(( response: any ) => {
+
           const user = response;
 
           if ( user ) {
             localStorage.setItem( 'token', user.token )
           }
+
         })
        );
   }
-
 }
