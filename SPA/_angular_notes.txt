@@ -1,10 +1,12 @@
 HTTP REQUESTS
+=============
 
 - Http requests retun an observable, and to access the observable, we need to subscribe to the request.
 
 
 
 NG ONINIT ()
+============
 
 - This function happens after the constreuctor is invoked and when the component is initialized.
 
@@ -16,7 +18,14 @@ NG ONINIT ()
 
 
 CORS
+====
 
 - Cross-Origin-Resdource-Sharing.
 - CORS controls which client is allowed to access our API.
 - These are managed in the backend. See dotnet notes.
+
+
+
+
+ANGULAR FORMS
+=============
