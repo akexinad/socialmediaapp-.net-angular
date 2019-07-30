@@ -16,13 +16,13 @@ export class RegisterComponent implements OnInit {
 
   register() {
     console.log(this.model);
-    
+
   }
 
   cancel() {
     console.log('cancelled!');
-    
+
   }
-  
+
 
 }
