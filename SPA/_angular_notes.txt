@@ -8,7 +8,7 @@ HTTP REQUESTS
 NG ONINIT ()
 ============
 
-- This function happens after the constreuctor is invoked and when the component is initialized.
+- This function happens after the constructor is invoked and when the component is initialized.
 
 - So the constructor makes HttpClient available.
 - We write the logic to get the values.
