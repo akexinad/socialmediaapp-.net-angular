@@ -33,6 +33,7 @@ namespace SocialMediaApp.API.Controllers
 
         // GET api/values
         // IActionResult allows us to return HTTP responses to the client.
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {

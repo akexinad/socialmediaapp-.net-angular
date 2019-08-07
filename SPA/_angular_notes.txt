@@ -23,3 +23,16 @@ CORS
 - Cross-Origin-Resdource-Sharing.
 - CORS controls which client is allowed to access our API.
 - These are managed in the backend. See dotnet notes.
+
+
+
+
+PARENT TO CHILD COMPONENT COMMUNICATION
+=======================================
+
+- This link is made inside the html files inside the child-component element like so:
+    - <child-component [dataFromParent]="dataVariableName" ></child-component>
+- You can name the data whatever you like in the square brackets.
+- Then in the child component ts, you add an @Input decorator:
+    - @Input() dataFromParent: type;
+- Now you can display that data in the child html component using the dataFromParent variable name.
