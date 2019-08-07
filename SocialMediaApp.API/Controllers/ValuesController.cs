@@ -11,11 +11,8 @@ namespace SocialMediaApp.API.Controllers
 {
     // The name of the route is determined by the name of the controller. In this example:
     // http://localhost:5000/api/values/5
-<<<<<<< HEAD
-=======
 
     // This attribute ensures you need to be authorized to enter this controller.
->>>>>>> 227a45ebbb70397cd598c89ff4c50a2bd15cd028
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
