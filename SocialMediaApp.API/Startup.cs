@@ -39,15 +39,10 @@ namespace SocialMediaApp.API
             services.AddCors();
             // NOTE: The controller will only be fed the IAuth Repository so the code in the controller will never have to change.
             services.AddScoped<IAuthRepository, AuthRepository>();
-<<<<<<< HEAD
             // Authentication Middleware for the Authorize attribute at the top of the AuthController.
             // You will then need to call app.UseAuthentication() in the configure method below.
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer( options => {
-=======
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options => {
->>>>>>> 227a45ebbb70397cd598c89ff4c50a2bd15cd028
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuerSigningKey = true,
