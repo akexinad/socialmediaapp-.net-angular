@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using SocialMediaApp.API.Data;
 
 namespace SocialMediaApp.API
@@ -36,6 +39,18 @@ namespace SocialMediaApp.API
             services.AddCors();
             // NOTE: The controller will only be fed the IAuth Repository so the code in the controller will never have to change.
             services.AddScoped<IAuthRepository, AuthRepository>();
+            // Authentication Middleware for the Authorize attribute at the top of the AuthController.
+            // You will then need to call app.UseAuthentication() in the configure method below.
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer( options => {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +79,7 @@ namespace SocialMediaApp.API
             // Mvc is a form of middleware that hooks up your backend end point to the client requests.
             // It routes our requests to the right controller.
             app.UseCors(config => config.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SocialMediaApp.API.Data;
@@ -10,6 +11,7 @@ namespace SocialMediaApp.API.Controllers
 {
     // The name of the route is determined by the name of the controller. In this example:
     // http://localhost:5000/api/values/5
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
 
@@ -37,6 +39,7 @@ namespace SocialMediaApp.API.Controllers
             return Ok(values);
         }
 
+        [AllowAnonymous]
         // GET api/values/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
