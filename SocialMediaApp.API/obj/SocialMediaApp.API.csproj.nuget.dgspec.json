@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\socialmediaapp-.net-angular\\SocialMediaApp.API\\SocialMediaApp.API.csproj": {}
+    "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\socialmediaapp-.net-angular\\SocialMediaApp.API\\SocialMediaApp.API.csproj": {
+    "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\socialmediaapp-.net-angular\\SocialMediaApp.API\\SocialMediaApp.API.csproj",
+        "projectUniqueName": "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj",
         "projectName": "SocialMediaApp.API",
-        "projectPath": "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\socialmediaapp-.net-angular\\SocialMediaApp.API\\SocialMediaApp.API.csproj",
+        "projectPath": "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\SocialMediaApp.API.csproj",
         "packagesPath": "C:\\Users\\cecd304\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\socialmediaapp-.net-angular\\SocialMediaApp.API\\obj\\",
+        "outputPath": "C:\\Users\\cecd304\\me\\code\\udemy\\cummings\\aspnetcore\\SocialMediaApp.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
