@@ -1,12 +1,14 @@
 HTTP REQUESTS
+=============
 
 - Http requests retun an observable, and to access the observable, we need to subscribe to the request.
 
 
 
 NG ONINIT ()
+============
 
-- This function happens after the constreuctor is invoked and when the component is initialized.
+- This function happens after the constructor is invoked and when the component is initialized.
 
 - So the constructor makes HttpClient available.
 - We write the logic to get the values.
@@ -16,7 +18,43 @@ NG ONINIT ()
 
 
 CORS
+====
 
 - Cross-Origin-Resdource-Sharing.
 - CORS controls which client is allowed to access our API.
 - These are managed in the backend. See dotnet notes.
+
+
+
+
+PARENT TO CHILD COMPONENT COMMUNICATION
+=======================================
+
+- This link is made inside the html files inside the child-component element like so:
+    - <child-component [dataFromParent]="dataVariableName" ></child-component>
+- You can name the data whatever you like in the square brackets.
+- Then in the child component ts, you add an @Input decorator:
+    - @Input() dataFromParent: type;
+- Now you can display that data in the child html component using the dataFromParent variable name.
+
+
+
+
+CHILD TO PARENT COMPONENT COMMUNICATION
+=======================================
+
+- Child components emit events and this form of communication assigns the event emitter the @Output decorator.
+    - @Output(): variableName = new EventEmitter();
+- Then we emit the event in the corresponding method:
+    - childComponentMethod() {
+        this.variableName.emit(whateverYouWantToEmit);
+    }
+- Then we go to the parent component html, and inside the child component element we use normal brackets to link the data:
+    - <child-component  
+        [dataFromParent]="dataVariableName"
+        (variableName)="newVariableMethodName( $event )" 
+    ></child-component>
+- Create a method in the parent ts component:
+    - newVariableMethodName( arg: type ) {
+        // Insert logic here
+    }

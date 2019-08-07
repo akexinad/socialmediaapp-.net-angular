@@ -152,5 +152,9 @@ TOKEN AUTHENTICATION
 AUTHENTICATION MIDDLEWARE
 =========================
 
+<<<<<<< HEAD
 - At the top of the controller you can declare that authentication is to be used.
 - And in your startup class you declare exactly what authentication middleware is to be used in the app.
+=======
+- Remember that any kind of middleware must be declared in the startup class.
+>>>>>>> 227a45ebbb70397cd598c89ff4c50a2bd15cd028

@@ -11,6 +11,11 @@ namespace SocialMediaApp.API.Controllers
 {
     // The name of the route is determined by the name of the controller. In this example:
     // http://localhost:5000/api/values/5
+<<<<<<< HEAD
+=======
+
+    // This attribute ensures you need to be authorized to enter this controller.
+>>>>>>> 227a45ebbb70397cd598c89ff4c50a2bd15cd028
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
@@ -31,6 +36,7 @@ namespace SocialMediaApp.API.Controllers
 
         // GET api/values
         // IActionResult allows us to return HTTP responses to the client.
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
@@ -41,6 +47,10 @@ namespace SocialMediaApp.API.Controllers
 
         [AllowAnonymous]
         // GET api/values/5
+
+        // The AllowAnonymous attribute can over ride the Authorize attribute
+        // and allow access wiothout authorization. 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {
