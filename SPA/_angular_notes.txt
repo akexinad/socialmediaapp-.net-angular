@@ -36,3 +36,25 @@ PARENT TO CHILD COMPONENT COMMUNICATION
 - Then in the child component ts, you add an @Input decorator:
     - @Input() dataFromParent: type;
 - Now you can display that data in the child html component using the dataFromParent variable name.
+
+
+
+
+CHILD TO PARENT COMPONENT COMMUNICATION
+=======================================
+
+- Child components emit events and this form of communication assigns the event emitter the @Output decorator.
+    - @Output(): variableName = new EventEmitter();
+- Then we emit the event in the corresponding method:
+    - childComponentMethod() {
+        this.variableName.emit(whateverYouWantToEmit);
+    }
+- Then we go to the parent component html, and inside the child component element we use normal brackets to link the data:
+    - <child-component  
+        [dataFromParent]="dataVariableName"
+        (variableName)="newVariableMethodName( $event )" 
+    ></child-component>
+- Create a method in the parent ts component:
+    - newVariableMethodName( arg: type ) {
+        // Insert logic here
+    }
