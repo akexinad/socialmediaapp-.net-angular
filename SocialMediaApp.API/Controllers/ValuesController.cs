@@ -43,7 +43,6 @@ namespace SocialMediaApp.API.Controllers
         }
 
         // GET api/values/5
-
         // The AllowAnonymous attribute can over ride the Authorize attribute
         // and allow access wiothout authorization. 
         [AllowAnonymous]
