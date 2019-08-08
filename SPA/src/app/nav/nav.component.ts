@@ -23,7 +23,7 @@ export class NavComponent implements OnInit {
 
       }, error => {
 
-        throw new Error( 'Failed to login' );
+        throw new Error(error);
 
       }
     );
