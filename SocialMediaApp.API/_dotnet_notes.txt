@@ -58,7 +58,7 @@ CREATING THE DATABASE
 
 - After you have completed the configuration settings in the appsettings.json file and the startup.cs file, run these commands:
 
-> dotnet ef migration add InitialCreate
+> dotnet ef migrations add InitialCreate
 - It creates a migrations folder.
 
 - NOTE: Remember to always check your migration file in the migrations folder to ensure that all necessary information is correct.
