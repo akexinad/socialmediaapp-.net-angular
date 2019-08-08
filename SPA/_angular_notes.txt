@@ -58,3 +58,11 @@ CHILD TO PARENT COMPONENT COMMUNICATION
     - newVariableMethodName( arg: type ) {
         // Insert logic here
     }
+
+
+
+
+IMPORTING NPM PACKAGES THAT REQUIRE CSS STYLING
+===============================================
+
+- When importing packages that require styling, you might need to import some files into the styles.css and angular.json [see the scripts property] files from the npm package itself.
