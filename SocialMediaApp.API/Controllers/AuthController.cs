@@ -3,6 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -12,6 +13,12 @@ using SocialMediaApp.API.Models;
 
 namespace SocialMediaApp.API.Controllers
 {
+    // This attribute ensures that everything that happens 
+    // through this controller has to be an authorized request.
+    //
+    // The controller knows what authentication 
+    // middleware is being used via the startup class.
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
