@@ -18,7 +18,6 @@ namespace SocialMediaApp.API.Controllers
     //
     // The controller knows what authentication 
     // middleware is being used via the startup class.
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
