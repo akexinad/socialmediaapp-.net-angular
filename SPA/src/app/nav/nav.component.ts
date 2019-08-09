@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {  } from "module";
 
 import { AuthService } from '../_services/auth.service';
 import { AlertifyService } from '../_services/alertify.service';
@@ -14,7 +13,9 @@ export class NavComponent implements OnInit {
   model: any = {};
 
   constructor(
-    private authService: AuthService,
+    // authservice is made public so it is visible within
+    // the van html component
+    public authService: AuthService,
     private alertify: AlertifyService
   ) { }
 
