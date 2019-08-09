@@ -17,5 +17,6 @@ namespace SocialMediaApp.API.Data
 
         // NOTE: whenever you add a new model or modify a model, we need to run a migration.
         public DbSet<User> Users { get; set; }
+        public DbSet<Photo> Photos { get; set; }
     }
 }
