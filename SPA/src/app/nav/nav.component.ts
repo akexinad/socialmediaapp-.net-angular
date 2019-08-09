@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  } from "module";
 
 import { AuthService } from '../_services/auth.service';
 import { AlertifyService } from '../_services/alertify.service';
@@ -31,11 +32,7 @@ export class NavComponent implements OnInit {
   }
 
   loggedIn() {
-    const token = localStorage.getItem('token');
-
-    // This is a short hand for an if-statement
-    // If there is a token, return true, else return false.
-    return !!token;
+    return this.authService.loggedIn();
   }
 
   logout() {
