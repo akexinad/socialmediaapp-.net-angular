@@ -66,3 +66,13 @@ IMPORTING NPM PACKAGES THAT REQUIRE CSS STYLING
 ===============================================
 
 - When importing packages that require styling, you might need to import some files into the styles.css and angular.json [see the scripts property] files from the npm package itself.
+
+
+
+
+CREATING GUARDS
+===============
+
+- Inside the _guards folder we have an angular guard that protects from unauthorized users being able to access certain routes of the application by just typing the route address.
+- Guards can be generated using the angular cli:
+    ng g guard fileName' --options
