@@ -42,8 +42,9 @@ namespace SocialMediaApp.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddCors();
             services.AddTransient<Seed>();
-            // NOTE: The controller will only be fed the IAuth Repository so the code in the controller will never have to change.
+            // NOTE: The controller will only be fed into the IAuth Repository so the code in the controller will never have to change.
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IDatingRepository, DatingRepository>();
             // Authentication Middleware for the Authorize attribute at the top of the AuthController.
             // You will then need to call app.UseAuthentication() in the configure method below.
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
