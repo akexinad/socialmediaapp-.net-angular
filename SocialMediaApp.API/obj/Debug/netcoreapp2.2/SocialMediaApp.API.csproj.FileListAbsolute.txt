@@ -54,3 +54,17 @@ C:\Users\cecd304\me\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\n
 C:\Users\cecd304\me\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.RazorTargetAssemblyInfo.cache
 C:\Users\cecd304\me\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.dll
 C:\Users\cecd304\me\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.pdb
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.deps.json
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.runtimeconfig.json
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.runtimeconfig.dev.json
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.dll
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\bin\Debug\netcoreapp2.2\SocialMediaApp.API.pdb
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.csprojAssemblyReference.cache
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.csproj.CoreCompileInputs.cache
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.RazorAssemblyInfo.cache
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.RazorAssemblyInfo.cs
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.AssemblyInfoInputs.cache
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.AssemblyInfo.cs
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.RazorTargetAssemblyInfo.cache
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.dll
+D:\code\udemy\cummings\aspnetang\SocialMediaApp.API\obj\Debug\netcoreapp2.2\SocialMediaApp.API.pdb
