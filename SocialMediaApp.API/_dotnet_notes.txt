@@ -178,3 +178,16 @@ JSON SERIALIZATION ERROR
     - Newtonsoft.Json.JsonSerializationException: Self referencing loop detected for property 'user' with type 'SocialMediaApp.API.Models.User'
 - The server sees a reference to Photo inside user, which has a reference to photo, which has a reference to user and doesn't know to handle this recursion.
 - We need to tell .NET to just ignore it.
+
+
+
+
+AUTOMAPPING
+===========
+
+- Use nugetpackage manager to install 'AutoMapper.Extensions.Microsoft.DependencyInjection'
+- Then add it to Startup.cs.
+- In helpers we need to create an AutoMapperProfile to tell AutoMapper how to map our models to our DTO's
+- Now we can use the map method in the users controller to return a user model without the sensitive data
+- AutoMapper is CONVENTION BASED, which means that it is smart enough to identify the properties that are similar in name and map them accordingly.
+    - For properties where names differ, AutoMapper will need some configuration. This will be the case for age and the photo url.

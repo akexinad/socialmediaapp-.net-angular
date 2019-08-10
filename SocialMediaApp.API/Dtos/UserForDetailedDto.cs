@@ -4,7 +4,7 @@ using SocialMediaApp.API.Models;
 
 namespace SocialMediaApp.API.Dtos
 {
-    public class UserForDetailed
+    public class UserForDetailedDto
     {
         public int Id { get; set; }
         public string Username { get; set; }
