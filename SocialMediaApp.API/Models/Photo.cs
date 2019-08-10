@@ -9,5 +9,9 @@ namespace SocialMediaApp.API.Models
         public string Description { get; set; }
         public DateTime DateAdded { get; set; }
         public bool IsMain { get; set; }
+        
+        // RELATIONSHIPS BETWEEN MODELS
+        public User User { get; set; }
+        public int UserId { get; set; }
     }
 }
