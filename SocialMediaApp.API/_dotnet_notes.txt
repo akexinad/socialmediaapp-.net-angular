@@ -167,3 +167,14 @@ MIGRATIONS TROUBLESHOOTING
 
     - Then recreate and update the database from the latest migration.
         > dotnet ef migrations update
+
+
+
+
+JSON SERIALIZATION ERROR
+========================
+
+- This expression is in reference to the error...
+    - Newtonsoft.Json.JsonSerializationException: Self referencing loop detected for property 'user' with type 'SocialMediaApp.API.Models.User'
+- The server sees a reference to Photo inside user, which has a reference to photo, which has a reference to user and doesn't know to handle this recursion.
+- We need to tell .NET to just ignore it.

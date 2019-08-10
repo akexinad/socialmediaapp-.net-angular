@@ -39,7 +39,11 @@ namespace SocialMediaApp.API
             // To install Sqlite, we use the nuget package manager.
             // The value of the connection string is declared in appsettings.json
             services.AddDbContext<DataContext>(db => db.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                // See JSON SERIALIZATION ERROR in notes
+                .AddJsonOptions(opt => {
+                    opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
             services.AddCors();
             services.AddTransient<Seed>();
             // NOTE: The controller will only be fed into the IAuth Repository so the code in the controller will never have to change.
