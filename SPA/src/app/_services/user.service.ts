@@ -7,7 +7,8 @@ import { User } from '../_models/user';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    Authorization: 'Bearer ' + localStorage.getItem('token')
+    // tslint:disable-next-line: object-literal-key-quotes
+    'Authorization': 'Bearer ' + localStorage.getItem('token')
   })
 };
 
