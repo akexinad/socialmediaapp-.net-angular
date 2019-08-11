@@ -17,6 +17,7 @@ import { RegisterComponent } from './register/register.component';
 import { ListsComponent } from './lists/lists.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
+import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 
 // PROVIDERS
@@ -39,6 +40,7 @@ export function tokenGetter() {
       ListsComponent,
       MemberListComponent,
       MemberCardComponent,
+      MemberDetailComponent,
       MessagesComponent
    ],
    imports: [
