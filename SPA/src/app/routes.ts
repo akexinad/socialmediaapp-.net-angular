@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 
 import { AuthGuard } from '@guards/auth.guard';
+import { PreventUnsavedChanges } from '@guards/prevent-unsaved-changes.guard';
+
 import { MemberDetailResolver } from '@resolvers/member-detail.resolver.ts';
 import { MemberListResolver } from '@resolvers/member-list.resolver';
 import { MemberEditResolver } from '@resolvers/member-edit.resolver';
@@ -17,7 +19,10 @@ export const appRoutes: Routes = [
     // Thus its necessary that the wild card route is left at the end.
     // path here and in the wildcard should be empty so if there is an issue with
     // the route it will redirect them to the home page
-    { path: '', component: HomeComponent },
+    {
+        path: '',
+        component: HomeComponent
+    },
     {
         // the path is empty because since
         // this is a first match wins basis, the authguard will activate
@@ -26,12 +31,35 @@ export const appRoutes: Routes = [
         runGuardsAndResolvers: 'always',
         canActivate: [AuthGuard],
         children: [
-            { path: 'members', component: MemberListComponent, resolve: {usersFromResolver: MemberListResolver} },
-            { path: 'members/:id', component: MemberDetailComponent, resolve: {userFromResolver: MemberDetailResolver} },
-            { path: 'member/edit', component: MemberEditComponent, resolve: {userFromEditResolver: MemberEditResolver} },
-            { path: 'messages', component: MessagesComponent },
-            { path: 'list', component: ListsComponent },
-            { path: '**', pathMatch: 'full', redirectTo: '' }
+            {
+                path: 'members',
+                component: MemberListComponent,
+                resolve: {usersFromResolver: MemberListResolver}
+            },
+            {
+                path: 'members/:id',
+                component: MemberDetailComponent,
+                resolve: {userFromResolver: MemberDetailResolver}
+            },
+            {
+                path: 'member/edit',
+                component: MemberEditComponent,
+                resolve: {userFromEditResolver: MemberEditResolver},
+                canDeactivate: [PreventUnsavedChanges]
+            },
+            {
+                path: 'messages',
+                component: MessagesComponent
+            },
+            {
+                path: 'list',
+                component: ListsComponent
+            },
+            {
+                path: '**',
+                pathMatch: 'full',
+                redirectTo: ''
+            }
         ]
     },
 ];
