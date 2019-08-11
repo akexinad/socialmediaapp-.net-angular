@@ -5,7 +5,8 @@
     "paths": {
       "@models/*": ["src/app/shared/models/*"],
       "@services/*": ["src/app/shared/services/*"],
-      "@guards/*": ["src/app/shared/guards/*"]
+      "@guards/*": ["src/app/shared/guards/*"],
+      "@resolvers/*": ["src/app/shared/resolvers/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

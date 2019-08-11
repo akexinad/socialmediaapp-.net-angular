@@ -22,16 +22,19 @@ export class MemberDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loadUser();
-  }
-
-  loadUser() {
-    // the id parameter is accessed via the router link in the member card html component
-    this.userService.getUser(this.route.snapshot.params.id).subscribe( (user: User) => {
-      this.user = user;
-    }, error => {
-      this.alertify.error(error);
+    // FROM THE RESOLVER VIA THE ROUTE
+    this.route.data.subscribe( data => {
+      this.user = data.userFromResolver;
     });
   }
+
+  // loadUser() {
+  //   // the id parameter is accessed via the router link in the member card html component
+  //   this.userService.getUser(this.route.snapshot.params.id).subscribe( (user: User) => {
+  //     this.user = user;
+  //   }, error => {
+  //     this.alertify.error(error);
+  //   });
+  // }
 
 }

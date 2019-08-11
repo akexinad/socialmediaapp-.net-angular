@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 
 import { AuthGuard } from '@guards/auth.guard';
+import { MemberDetailResolver } from '@resolvers/member-detail.resolver.ts';
+import { MemberListResolver } from '@resolvers/member-list.resolver';
 
 import { HomeComponent } from './home/home.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
@@ -22,8 +24,8 @@ export const appRoutes: Routes = [
         runGuardsAndResolvers: 'always',
         canActivate: [AuthGuard],
         children: [
-            { path: 'members', component: MemberListComponent },
-            { path: 'members/:id', component: MemberDetailComponent },
+            { path: 'members', component: MemberListComponent, resolve: {usersFromResolver: MemberListResolver} },
+            { path: 'members/:id', component: MemberDetailComponent, resolve: {userFromResolver: MemberDetailResolver} },
             { path: 'messages', component: MessagesComponent },
             { path: 'list', component: ListsComponent },
             { path: '**', pathMatch: 'full', redirectTo: '' }
