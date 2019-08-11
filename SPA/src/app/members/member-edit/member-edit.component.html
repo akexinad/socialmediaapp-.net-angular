@@ -6,7 +6,8 @@
         </div>
         
         <div class="col-sm-8">
-          <div class="alert alert-info">
+          <!-- Only if the form has been touched/is dirty should we show this warning -->
+          <div *ngIf="editForm.dirty" class="alert alert-info">
             <p><strong>Information:</strong> You have made changes, any unsaved changes will be lost!</p>
           </div>
         </div>
@@ -40,7 +41,7 @@
                 
               </div>
               <div class="card-footer">
-                <button class="btn btn-success btn-block">Save Changes</button>
+                <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save Changes</button>
               </div>
             </div>
           </div>
@@ -49,7 +50,9 @@
             <div class="tab-panel">
               <tabset class="member-tabset">
                 <tab heading="Edit Profile">
-                  <form>
+                  <!-- Give the form a name so we can check if the form has been touched/is dirty so we know when to show the warning. -->
+                  <!-- We give the form an id so the Save Changes button can identify what form it needs to submit. -->
+                  <form #editForm="ngForm" id="editForm" (ngSubmit)="updateUser()">
                     
                     <h4>Description</h4>
                     <textarea name="introduction" rows="6" class="form-control" [(ngModel)]="user.introduction"></textarea>
