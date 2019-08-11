@@ -13,5 +13,6 @@ export interface User {
     interests?: string;
     city: string;
     country: string;
-    photoUrl: Photo;
+    photos: Photo[];
+    photoUrl: Photo['url'];
 }
