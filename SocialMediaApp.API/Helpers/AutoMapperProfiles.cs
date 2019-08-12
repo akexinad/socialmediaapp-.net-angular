@@ -9,6 +9,10 @@ namespace SocialMediaApp.API.Helpers
     {
         public AutoMapperProfiles()
         {
+
+            // When you create map, the first argument is your starting point,
+            // and the second argument is the destination.
+            
             CreateMap<User, UserForListDto>()
                 // We need to tell automapper how to map the PhotoUrl to be the photo that isMain
                 .ForMember(dest => dest.PhotoUrl, opt => {
@@ -19,6 +23,7 @@ namespace SocialMediaApp.API.Helpers
                 .ForMember(dest => dest.Age, opt => {
                     opt.ResolveUsing(d => d.DateOfBirth.CalculateAge());
                 });
+            
             CreateMap<User, UserForDetailedDto>()
                 .ForMember(dest => dest.PhotoUrl, opt => {
                     opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url);
@@ -26,7 +31,10 @@ namespace SocialMediaApp.API.Helpers
                 .ForMember(dest => dest.Age, opt => {
                     opt.ResolveUsing(d => d.DateOfBirth.CalculateAge());
                 });
+            
             CreateMap<Photo, PhotosForDetailedDto>();
+
+            CreateMap<UserForUpdateDto, User>();
         }
     }
 }
