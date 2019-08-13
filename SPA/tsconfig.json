@@ -6,7 +6,8 @@
       "@models/*": ["src/app/shared/models/*"],
       "@services/*": ["src/app/shared/services/*"],
       "@guards/*": ["src/app/shared/guards/*"],
-      "@resolvers/*": ["src/app/shared/resolvers/*"]
+      "@resolvers/*": ["src/app/shared/resolvers/*"],
+      "@interceptors/*": ["src/app/shared/interceptors/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

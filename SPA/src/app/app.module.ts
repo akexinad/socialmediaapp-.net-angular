@@ -24,7 +24,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 
 // PROVIDERS
 import { AuthService } from '@services/auth.service';
-import { ErrorInterceptorProvider } from '@services/error.interceptor';
+import { ErrorInterceptorProvider } from '@interceptors/error.interceptor';
 import { AlertifyService } from '@services/alertify.service';
 import { AuthGuard } from '@guards/auth.guard';
 import { UserService } from '@services/user.service';
