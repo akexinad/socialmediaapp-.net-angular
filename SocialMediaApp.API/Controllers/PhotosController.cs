@@ -53,7 +53,7 @@ namespace SocialMediaApp.API.Controllers
 
             var photo = _mapper.Map<PhotoForReturnDto>(photoFromRepo);
 
-            return Ok()
+            return Ok();
         }
 
         [HttpPost]
