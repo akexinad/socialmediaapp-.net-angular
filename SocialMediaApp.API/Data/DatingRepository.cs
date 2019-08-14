@@ -43,5 +43,13 @@ namespace SocialMediaApp.API.Data
             // We want to return true or false from this method.
             return await _context.SaveChangesAsync() > 0;
         }
+
+        public async Task<Photo> GetPhoto(int id)
+        {
+            var photo = await _context.Photos.FirstOrDefaultAsync(p => p.Id == id);
+        
+            return photo;
+        }
+
     }
 }

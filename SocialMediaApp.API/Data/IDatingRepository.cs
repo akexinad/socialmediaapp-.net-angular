@@ -16,5 +16,6 @@ namespace SocialMediaApp.API.Data
         // IEnumerable<User> = a list of type user
         Task<IEnumerable<User>> GetUsers();
         Task<User> GetUser(int id);
+        Task<Photo> GetPhoto(int id);
     }
 }
