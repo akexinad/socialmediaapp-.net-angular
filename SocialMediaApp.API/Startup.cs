@@ -46,6 +46,9 @@ namespace SocialMediaApp.API
                     opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
             services.AddCors();
+            // Marrying the cloudinary class with your cloudinary settings inside your appsettings.json file.
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
+            // AUTO MAPPER PROFILE.
             services.AddAutoMapper();
             services.AddTransient<Seed>();
             // NOTE: The controller will only be fed into the IAuth Repository so the code in the controller will never have to change.

@@ -9,6 +9,9 @@ namespace SocialMediaApp.API.Models
         public string Description { get; set; }
         public DateTime DateAdded { get; set; }
         public bool IsMain { get; set; }
+
+        // PUBLIC ID: Found in the cloudinary respone when we have uploaded a photo.
+        public string PublicId { get; set; }
         
         // RELATIONSHIPS BETWEEN MODELS
         public User User { get; set; }

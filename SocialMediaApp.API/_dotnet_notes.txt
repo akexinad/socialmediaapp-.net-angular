@@ -191,3 +191,19 @@ AUTOMAPPING
 - Now we can use the map method in the users controller to return a user model without the sensitive data
 - AutoMapper is CONVENTION BASED, which means that it is smart enough to identify the properties that are similar in name and map them accordingly.
     - For properties where names differ, AutoMapper will need some configuration. This will be the case for age and the photo url.
+
+
+
+
+.NET AND CLOUDINARY
+===================
+
+- Cloudinary has specific framework documentation that tells you how to integrate it:
+
+- You store your cloudinary settings in the appsettings.json file.
+- Strongly type your cloudinary settings in a C# class in the helpers folder.
+- Import them into a service inside your startup.cs.
+- When we have uploaded a photo, cloundinary sends back a public id which we will need to store in the Photo entity.
+    - Don't forget that when you edit an entity, you need to add a new migration to the database in order to create a new column.
+- FINALLY, we add the cloudinary nuget package. Search for:
+    > CloudinaryDotNet
